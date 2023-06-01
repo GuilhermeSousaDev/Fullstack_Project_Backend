@@ -6,10 +6,12 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.1",
     "@types/jsonwebtoken": "^9.0.1",
     "@types/multer": "^1.4.7",
     "@types/node": "^8.0.29",
-    "ts-node": "3.3.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "typescript": "3.3.3333"
   },
   "dependencies": {
@@ -43,7 +45,7 @@
     "typeorm": "0.2.41"
   },
   "scripts": {
-    "start": "tsx src/shared/infra/http/index.ts",
+    "test": "jest",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/index.ts",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files"
